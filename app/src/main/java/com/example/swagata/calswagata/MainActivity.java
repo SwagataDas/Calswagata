@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
-    Button plusButton, equalsButton,subButton,mulButon,divButon;
+    Button plusButton, equalsButton,subButton,mulButton,divButton;
     private int firstNumberGroup;
     private int secondNumberGroup;
 
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         subButton = (Button) findViewById(R.id.sub);
         mulButon = (Button) findViewById(R.id.mul);
         divButon = (Button) findViewById(R.id.div);
+
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,10 +38,36 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 secondNumberGroup = Integer.parseInt(textView.getText().toString());
                 int add = firstNumberGroup + secondNumberGroup;
-                textView.setText(""+add);
+                textView.setText("" + add);
             }
         });
-    }
-
-        subButton.senClickListener(new View.OnClickListner() {
+        subButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                secondNumberGroup = Integer.parseInt(textView.getText().toString());
+                int subtraction = firstNumberGroup - secondNumberGroup;
+                textView.setText("" +subtraction);
         }
+
+        });
+        mulButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                secondNumberGroup = Integer.parseInt(textView.getText().toString());
+                int multiplication = firstNumberGroup * secondNumberGroup;
+                textView.setText("" +multiplication);
+
+            }
+
+        });
+        divButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                secondNumberGroup = Integer.parseInt(textView.getText().toString());
+                int division = firstNumberGroup / secondNumberGroup;
+                textView.setText(""
+                        +division);
+            }
+
+        });
+
