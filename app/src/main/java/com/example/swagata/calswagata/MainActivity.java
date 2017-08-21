@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         plusButton = (Button) findViewById(R.id.plus);
         equalsButton = (Button) findViewById(R.id.plus);
         subButton = (Button) findViewById(R.id.sub);
-        mulButon = (Button) findViewById(R.id.mul);
-        divButon = (Button) findViewById(R.id.div);
+        mulButton = (Button) findViewById(R.id.mul);
+        divButton = (Button) findViewById(R.id.div);
 
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,4 +69,22 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        plusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firstNumberGroup = Integer.parseInt(textView.getText().toString());
+                textView.setText("");
+            }
+
+            public void numberOnClick(View view) {
+                TextView buttonText = (TextView) view;
+                if (textView.getText().equals("")) {
+                    textView.setText(buttonText.getText());
+                } else {
+                    textView.append(buttonText.getText());
+                }
+
+            }
+
 
