@@ -76,15 +76,18 @@ public class MainActivity extends AppCompatActivity {
                 firstNumberGroup = Integer.parseInt(textView.getText().toString());
                 textView.setText("");
             }
+        });
+    }
 
-            public void numberOnClick(View view) {
-                TextView buttonText = (TextView) view;
-                if (textView.getText().equals("")) {
-                    textView.setText(buttonText.getText());
-                } else {
-                    textView.append(buttonText.getText());
-                }
+    public void numberOnClick(View view) {
+        TextView buttonText = (TextView) view;
+        if (textView.getText().equals("")) {
+            textView.setText(buttonText.getText());
+        } else {
+            textView.append(buttonText.getText());
+        }
 
-            }
+    }
+}
 
 
