@@ -65,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 secondNumberGroup = Integer.parseInt(textView.getText().toString());
                 int division = firstNumberGroup / secondNumberGroup;
-                textView.setText(""
-                        +division);
+                textView.setText("" +division);
             }
 
         });
